@@ -1,44 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
-
     //walk speed
     public float walkSpeed = 5f;
-
     //run speed
     public float runSpeed = 6f;
-
     //gravity
     public float gravity = -9.8f;
-
     Vector3 velocity;
-
     public Transform groundCheck;
-
     //check ground and player
     public float groundDistance = 0.4f;
-
     public LayerMask groundMask;
-
-    //ground or not
+    public float jumpHeight = 2f;
     bool isGrounded;
 
-    public float jumpHeight = 2f;
+    public Slider powerSlider;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        //ground check
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
@@ -66,10 +51,18 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
-        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift) && powerSlider.value > 0.01)//if there is != 0, its not gonna be work,because the value is floatting;
         {
             controller.Move(move * runSpeed * Time.deltaTime);
+            powerSlider.value -= runSpeed * Time.deltaTime;
+            Debug.Log("Run");
+        }
+        else
+        {
+            powerSlider.value += Time.deltaTime;
+
         }
 
     }
+
 }
