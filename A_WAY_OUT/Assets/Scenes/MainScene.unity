@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SubtractiveShadowColor: {r: 0.51054645, g: 0.7264151, b: 0.6222127, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 03c465b049e652b48a7bf9c56cb13c92, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 842809dd58e2abf4087f1e0a3f06fa1a, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2970,7 +2970,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.8311084, g: 0.9622642, b: 0.6309185, a: 1}
   m_Intensity: 2
-  m_Range: 15
+  m_Range: 10
   m_SpotAngle: 50
   m_InnerSpotAngle: 3
   m_CookieSize: 10
@@ -3342,8 +3342,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0
+  m_Color: {r: 0.5968316, g: 0.6603774, b: 0.501513, a: 1}
+  m_Intensity: 0.08
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -4266,7 +4266,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 47, y: 25}
+  m_AnchoredPosition: {x: -0, y: 35}
   m_SizeDelta: {x: 154.3, y: 24.5721}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2059049695
@@ -4393,11 +4393,11 @@ PrefabInstance:
       objectReference: {fileID: 274419196}
     - target: {fileID: 140618636435465035, guid: 8561163b41aa3e34eae1d8c745113172, type: 3}
       propertyPath: m_LocalScale.z
-      value: 4.6192265
+      value: 4.3827806
       objectReference: {fileID: 0}
     - target: {fileID: 140618636435465035, guid: 8561163b41aa3e34eae1d8c745113172, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.14
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: 2834625835365535470, guid: 8561163b41aa3e34eae1d8c745113172, type: 3}
       propertyPath: m_Mesh
