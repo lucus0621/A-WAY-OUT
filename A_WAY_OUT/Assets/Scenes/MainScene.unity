@@ -618,6 +618,7 @@ GameObject:
   - component: {fileID: 930443066}
   - component: {fileID: 930443065}
   - component: {fileID: 930443067}
+  - component: {fileID: 930443068}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -683,6 +684,19 @@ MonoBehaviour:
     m_Bits: 64
   jumpHeight: 1
   powerSlider: {fileID: 2059049695}
+--- !u!114 &930443068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930443064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee763b7a83032fa4697575be32f136ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FlashlightLight: {fileID: 1076123588}
 --- !u!1 &935048104
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,7 +1015,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076123588}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.39, z: 0}
+  m_LocalPosition: {x: 0, y: -0.38999993, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 963194228}
