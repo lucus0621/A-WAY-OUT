@@ -35,14 +35,16 @@ public class AIMove : MonoBehaviour
                 agent.SetDestination(wayPoints[currentWayPoint].position);
             }
         }
-        //change speed when the ai close to player during the chase
-        //if (aiState == AIState.Chase)
-        //{
-        //    if ()
-        //    {
-        //
-        //    }
-        //}
+        else if (aiState == AIState.Chase)
+        {
+            agent.SetDestination(player.transform.position);
+
+            if (Vector3.Distance(transform.position, player.transform.position) > 10)
+            {
+                aiState = AIState.Patrol;
+                agent.SetDestination(wayPoints[currentWayPoint].position);
+            }
+        }
     }
 
     public void CheckVisibleHostile(GameObject player)
@@ -55,6 +57,18 @@ public class AIMove : MonoBehaviour
             if (hit.transform.gameObject == player)
                 aiState = AIState.Chase;
         }
+    }
+
+    public void ChangeAiStateChase()
+    {
+        Debug.Log("call change state");
+        aiState = AIState.Chase;
+    }
+
+    public void ChangeAiStatePatrol()
+    {
+        Debug.Log("call Patrol state");
+        aiState = AIState.Patrol;
     }
 }
 

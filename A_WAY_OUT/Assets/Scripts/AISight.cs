@@ -21,9 +21,15 @@ public class AISight : MonoBehaviour
     public void OnTriggerStay(Collider other)
     {
         //if AI see the player or player's light, it will change the state from sleep/patrol to chase
-        if (other.tag == "Player" || other.tag == "Light")
+        if (other.tag == "Player")
         {
             aiMove.CheckVisibleHostile(other.gameObject);
+            aiMove.ChangeAiStateChase();
+        }
+        if (other.tag == "Light")
+        {
+            Debug.Log("see light");
+            aiMove.ChangeAiStatePatrol();
         }
     }
 }
