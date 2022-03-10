@@ -28,7 +28,7 @@ public class AISight : MonoBehaviour
         }
         if (other.tag == "Light")
         {
-            Debug.Log("see light");
+            //Debug.Log("see light");
             aiMove.ChangeAiStatePatrol();
         }
     }
