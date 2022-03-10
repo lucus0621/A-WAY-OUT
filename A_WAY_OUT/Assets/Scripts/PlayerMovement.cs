@@ -55,7 +55,6 @@ public class PlayerMovement : MonoBehaviour
         {
             controller.Move(move * runSpeed * Time.deltaTime);
             powerSlider.value -= runSpeed * Time.deltaTime;
-            Debug.Log("RUN");
         }
         else
         {
