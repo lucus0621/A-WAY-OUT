@@ -52,7 +52,7 @@ public class AIMove : MonoBehaviour
         RaycastHit hit;
         if (Physics.Linecast(transform.position, player.transform.position, out hit))
         {
-            Debug.Log(hit.transform.gameObject.name);
+            //Debug.Log(hit.transform.gameObject.name);
             Debug.DrawLine(hit.point, transform.position, Color.blue, 3);
             if (hit.transform.gameObject == player)
                 aiState = AIState.Chase;
@@ -61,13 +61,13 @@ public class AIMove : MonoBehaviour
 
     public void ChangeAiStateChase()
     {
-        Debug.Log("call change state");
+        //Debug.Log("call change state");
         aiState = AIState.Chase;
     }
 
     public void ChangeAiStatePatrol()
     {
-        Debug.Log("call Patrol state");
+        //Debug.Log("call Patrol state");
         aiState = AIState.Patrol;
     }
 }
