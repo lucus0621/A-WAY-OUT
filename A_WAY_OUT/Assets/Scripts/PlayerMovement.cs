@@ -76,11 +76,11 @@ public class PlayerMovement : MonoBehaviour
             pack.showPack();
         }
 
-        Debug.DrawRay(tr.position, tr.forward * 2.0f, Color.green);
+        Debug.DrawRay(tr.position, tr.forward * 1.5f, Color.green);
         RaycastHit hit;
-        if (Physics.Raycast(tr.position, tr.forward, out hit, 2.0f))
+        if (Physics.Raycast(tr.position, tr.forward, out hit, 1.5f))
         {
-            //Debug.Log ("ÉäÏß»÷ÖÐ:" + hit.collider.gameObject.name + "\n tag:" + hit.collider.tag);
+            Debug.Log ("RayHit:" + hit.collider.gameObject.name + "\n tag:" + hit.collider.tag);
             GameObject gameObj = hit.collider.gameObject;
             ObjectItem obj = (ObjectItem)gameObj.GetComponent<ObjectItem>();
             if (obj != null)
