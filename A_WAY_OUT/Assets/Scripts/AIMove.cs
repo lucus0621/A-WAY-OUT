@@ -39,7 +39,7 @@ public class AIMove : MonoBehaviour
         {
             agent.SetDestination(player.transform.position);
 
-            if (Vector3.Distance(transform.position, player.transform.position) > 8)
+            if (Vector3.Distance(transform.position, player.transform.position) > 7)
             {
                 aiState = AIState.Patrol;
                 agent.SetDestination(wayPoints[currentWayPoint].position);
@@ -53,7 +53,7 @@ public class AIMove : MonoBehaviour
         if (Physics.Linecast(transform.position, player.transform.position, out hit))
         {
             //Debug.Log(hit.transform.gameObject.name);
-            Debug.DrawLine(hit.point, transform.position, Color.blue, 4);
+            Debug.DrawLine(hit.point, transform.position, Color.blue, 3.5f);
             if (hit.transform.gameObject == player)
                 aiState = AIState.Chase;
         }
