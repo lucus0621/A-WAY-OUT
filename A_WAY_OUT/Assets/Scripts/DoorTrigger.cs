@@ -12,6 +12,7 @@ public class DoorTrigger : MonoBehaviour
 
     public AudioSource DoorOpen;
     public bool IsOpenClose = false;
+
     // Start is called before the first frame update
     void Start()
     {

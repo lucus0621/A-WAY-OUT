@@ -39,7 +39,7 @@ public class AIMove : MonoBehaviour
         {
             agent.SetDestination(player.transform.position);
 
-            if (Vector3.Distance(transform.position, player.transform.position) > 10)
+            if (Vector3.Distance(transform.position, player.transform.position) > 7)
             {
                 aiState = AIState.Patrol;
                 agent.SetDestination(wayPoints[currentWayPoint].position);
