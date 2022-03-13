@@ -12,8 +12,11 @@ public class LockPick : MonoBehaviour
     public float maxAngle = 90;
     public float lockSpeed = 10;
 
-    [Min(1)]
     [Range(1, 25)]
+    public float choice = 5;
+
+    //[Min(1)]
+    [Range(1, 50)]
     public float lockRange = 10;
 
     private float eulerAngle;
