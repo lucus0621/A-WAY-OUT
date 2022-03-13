@@ -1,0 +1,221 @@
+fileFormatVersion: 2
+guid: a11ab108e89e95143abd0fb40c15dd2c
+labels:
+- House
+- Cottage
+- Building
+- Destructible
+- PBR
+timeCreated: 1429454798
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: House_Bathroom
+    100004: House_Bathroom_Tiles
+    100006: House_Bedroom
+    100008: House_Door
+    100010: House_Door.001
+    100012: House_Door.002
+    100014: House_Door.003
+    100016: House_Kitchen
+    100018: House_Livingroom
+    100020: House_Main_frame
+    100022: House_Roof
+    100024: House_Roofing_frame
+    100026: House_Window
+    100028: House_Window.001
+    100030: House_Window.002
+    100032: House_Window.003
+    100034: House_Window.004
+    100036: House_Window.005
+    100038: House_WindowGlass
+    100040: House_WindowGlass.001
+    100042: House_WindowGlass.002
+    100044: House_WindowGlass.003
+    100046: House_WindowGlass.004
+    100048: House_WindowGlass.005
+    400000: //RootNode
+    400002: House_Bathroom
+    400004: House_Bathroom_Tiles
+    400006: House_Bedroom
+    400008: House_Door
+    400010: House_Door.001
+    400012: House_Door.002
+    400014: House_Door.003
+    400016: House_Kitchen
+    400018: House_Livingroom
+    400020: House_Main_frame
+    400022: House_Roof
+    400024: House_Roofing_frame
+    400026: House_Window
+    400028: House_Window.001
+    400030: House_Window.002
+    400032: House_Window.003
+    400034: House_Window.004
+    400036: House_Window.005
+    400038: House_WindowGlass
+    400040: House_WindowGlass.001
+    400042: House_WindowGlass.002
+    400044: House_WindowGlass.003
+    400046: House_WindowGlass.004
+    400048: House_WindowGlass.005
+    2300000: //RootNode
+    2300002: House_Bathroom
+    2300004: House_Bathroom_Tiles
+    2300006: House_Bedroom
+    2300008: House_Door
+    2300010: House_Door.001
+    2300012: House_Door.002
+    2300014: House_Door.003
+    2300016: House_Kitchen
+    2300018: House_Livingroom
+    2300020: House_Main_frame
+    2300022: House_Roof
+    2300024: House_Roofing_frame
+    2300026: House_Window
+    2300028: House_Window.001
+    2300030: House_Window.002
+    2300032: House_Window.003
+    2300034: House_Window.004
+    2300036: House_Window.005
+    2300038: House_WindowGlass
+    2300040: House_WindowGlass.001
+    2300042: House_WindowGlass.002
+    2300044: House_WindowGlass.003
+    2300046: House_WindowGlass.004
+    2300048: House_WindowGlass.005
+    3300000: //RootNode
+    3300002: House_Bathroom
+    3300004: House_Bathroom_Tiles
+    3300006: House_Bedroom
+    3300008: House_Door
+    3300010: House_Door.001
+    3300012: House_Door.002
+    3300014: House_Door.003
+    3300016: House_Kitchen
+    3300018: House_Livingroom
+    3300020: House_Main_frame
+    3300022: House_Roof
+    3300024: House_Roofing_frame
+    3300026: House_Window
+    3300028: House_Window.001
+    3300030: House_Window.002
+    3300032: House_Window.003
+    3300034: House_Window.004
+    3300036: House_Window.005
+    3300038: House_WindowGlass
+    3300040: House_WindowGlass.001
+    3300042: House_WindowGlass.002
+    3300044: House_WindowGlass.003
+    3300046: House_WindowGlass.004
+    3300048: House_WindowGlass.005
+    4300000: House_Main
+    4300002: House_Bedroom
+    4300004: House_Kitchen
+    4300006: House_Door.003
+    4300008: House_Bathroom
+    4300010: House_Bathroom_Tiles
+    4300012: House_Livingroom
+    4300014: House_Door.001
+    4300016: House_Door.002
+    4300018: House_Window.005
+    4300020: House_Window.004
+    4300022: House_Window.003
+    4300024: House_Window.002
+    4300026: House_Window.001
+    4300028: House_Main_frame
+    4300030: House_Door
+    4300032: House_Window
+    4300034: House_WindowGlass.005
+    4300036: House_WindowGlass.004
+    4300038: House_WindowGlass.003
+    4300040: House_WindowGlass.002
+    4300042: House_WindowGlass.001
+    4300044: House_WindowGlass
+    4300046: House_Roof
+    4300048: House_Roofing_frame
+    6400000: //RootNode
+    6400002: House_Bathroom
+    6400004: House_Bathroom_Tiles
+    6400006: House_Bedroom
+    6400008: House_Door
+    6400010: House_Door.001
+    6400012: House_Door.002
+    6400014: House_Door.003
+    6400016: House_Kitchen
+    6400018: House_Livingroom
+    6400020: House_Main_frame
+    6400022: House_Roof
+    6400024: House_Roofing_frame
+    6400026: House_Window
+    6400028: House_Window.001
+    6400030: House_Window.002
+    6400032: House_Window.003
+    6400034: House_Window.004
+    6400036: House_Window.005
+    6400038: House_WindowGlass
+    6400040: House_WindowGlass.001
+    6400042: House_WindowGlass.002
+    6400044: House_WindowGlass.003
+    6400046: House_WindowGlass.004
+    6400048: House_WindowGlass.005
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
