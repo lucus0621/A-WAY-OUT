@@ -7,7 +7,7 @@ public class DoorTrigger : MonoBehaviour
     private bool enterCollide = false;
 
     public GameObject Door;
-    public GameManager gameManager;
+    //public GameManager gameManager;
     public bool Door_false = false;
     Quaternion targetAngels01;
 
@@ -48,11 +48,11 @@ public class DoorTrigger : MonoBehaviour
                 DoorOpen.Play();
                 Door_false = true;
                 
-                gameManager.ShowLock();
+                //gameManager.ShowLock();
 
                 if (IsOpenClose == false)
                 {
-                    targetAngels01 = Quaternion.Euler(0, -90, 0);
+                    targetAngels01 = Quaternion.Euler(0, 90, 0);
                     IsOpenClose = true;
                 }
                 else
