@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject LockPick;
-    public GameObject Lock;
+    //public GameObject LockPick;
+    //public GameObject Lock;
+    public GameObject LockPanel;
 
 
     // Start is called before the first frame update
@@ -20,15 +21,14 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void ShowLock()
-    {
-        Lock.SetActive(true);
-        LockPick.SetActive(true);
-    }
 
-    public void CloseLock()
-    {
-        Lock.SetActive(false);
-        LockPick.SetActive(false);
+   public void ShowLock()
+   {
+        LockPanel.SetActive(true);     
+   }
+   
+   public void CloseLock()
+   {
+        LockPanel.SetActive(false);
     }
 }

@@ -7,6 +7,7 @@ public class DoorTrigger : MonoBehaviour
     private bool enterCollide = false;
 
     public GameObject Door;
+    public GameManager gameManager;
     public bool Door_false = false;
     Quaternion targetAngels01;
 
@@ -29,7 +30,7 @@ public class DoorTrigger : MonoBehaviour
     {
         if (Door_false == true)
         {
-
+            //gameManager.ShowLock();
             Door.transform.rotation = Quaternion.Slerp(Door.transform.rotation, targetAngels01, 1 * Time.deltaTime);
 
             if (Quaternion.Angle(targetAngels01, Door.transform.rotation) < 1)
@@ -46,6 +47,8 @@ public class DoorTrigger : MonoBehaviour
             {
                 DoorOpen.Play();
                 Door_false = true;
+                
+                gameManager.ShowLock();
 
                 if (IsOpenClose == false)
                 {
