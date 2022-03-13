@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class HideWayToGate : MonoBehaviour
 {
+    public AudioSource HideWayBroken;
     public Transform MarkPos;
     private GameObject gameObjectsl;
     void OnTriggerEnter(Collider collider)
     {
+        HideWayBroken.Play();
         Debug.Log("HideWay");
         gameObjectsl = collider.gameObject;
         collider.gameObject.SetActive(false);
