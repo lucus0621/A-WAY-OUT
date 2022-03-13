@@ -14,10 +14,6 @@ public class MattressMove : MonoBehaviour
     public bool IsOpenClose = false;
     Vector3 targetPosition = new Vector3(0, 20, 0);
     float maxDistanceDelta = 1f;
-    // maxDistanceDelta的负值从目标推开向量，就是说maxDistanceDelta是正值，当前地点移向目标，如果是负值当前地点将远离目标。
-
-  
-
 
     void OnTriggerEnter(Collider collider)
     {
@@ -50,11 +46,11 @@ public class MattressMove : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
-                Moving.Play();
                 Mattress_false = true;
 
                 if (IsOpenClose == false)
                 {
+                    Moving.Play();
                     targetAngels01 = Quaternion.Euler(0, 0, 100);
                     transform.position = Vector3.MoveTowards(transform.position, targetPosition, maxDistanceDelta);
                     IsOpenClose = true;
