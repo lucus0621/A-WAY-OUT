@@ -24,10 +24,13 @@ public class PlayerMovement : MonoBehaviour
     private Pack pack;
     private Transform tr;
 
+    private AudioSource audioSource;
+
     void Start()
     {
         tr = GetComponent<Transform>();
         pack = GetComponent<Pack>();
+        audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -57,9 +60,19 @@ public class PlayerMovement : MonoBehaviour
         // y=1/2*g*t*t
         // gravity change
         velocity.y += gravity * Time.deltaTime;
-
+        
         controller.Move(velocity * Time.deltaTime);
-
+        if (z != 0)
+        {
+            if (audioSource.isPlaying == false)
+            {
+                audioSource.Play();
+            }
+        }
+        else if (audioSource.isPlaying && z == 0)
+        {
+            audioSource.Stop();
+        }
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift) && powerSlider.value > 0.01)//if there is != 0, its not gonna be work,because the value is floatting;
         {
             controller.Move(move * runSpeed * Time.deltaTime);
@@ -89,6 +102,15 @@ public class PlayerMovement : MonoBehaviour
                 //Debug.Log(obj.objName);
                 if (Input.GetKeyDown(KeyCode.R))
                 {
+                    if (obj.name == "Key1")
+                    {
+                        TwoKeyDoor.key1 = true;
+                    }
+                    else if (obj.name == "Key2")
+                    {
+                        TwoKeyDoor.key2 = true;
+
+                    }
                     obj = pack.getItem(obj);
                     if (obj.count == 0)
                     {

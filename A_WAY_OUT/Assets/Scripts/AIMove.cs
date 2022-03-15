@@ -15,11 +15,13 @@ public class AIMove : MonoBehaviour
     public AIState aiState;
     public GameObject player;
 
+    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
         currentWayPoint = 0;
         agent.SetDestination(wayPoints[currentWayPoint].position);
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -34,11 +36,18 @@ public class AIMove : MonoBehaviour
 
                 agent.SetDestination(wayPoints[currentWayPoint].position);
             }
+            if (audioSource.isPlaying)
+            {
+                audioSource.Stop();
+            }
         }
         else if (aiState == AIState.Chase)
         {
             agent.SetDestination(player.transform.position);
-
+            if (audioSource.isPlaying == false)
+            {
+                audioSource.Play();
+            }
             if (Vector3.Distance(transform.position, player.transform.position) > 7)
             {
                 aiState = AIState.Patrol;
