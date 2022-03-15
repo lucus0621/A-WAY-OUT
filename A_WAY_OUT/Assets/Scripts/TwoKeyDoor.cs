@@ -11,7 +11,6 @@ public class TwoKeyDoor : MonoBehaviour
     {
         key1 = false;
         key2 = false;
-
     }
 
     private void Update()
