@@ -14,6 +14,8 @@ public class DoorTrigger : MonoBehaviour
     public AudioSource DoorOpen;
     public bool IsOpenClose = false;
 
+    public GameManager gameManager;
+
     void OnTriggerEnter(Collider collider)
     {
         Debug.Log("enter");
@@ -45,10 +47,10 @@ public class DoorTrigger : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
+                gameManager.CallKeyScene();
+
                 DoorOpen.Play();
                 Door_false = true;
-                
-                //gameManager.ShowLock();
 
                 if (IsOpenClose == false)
                 {

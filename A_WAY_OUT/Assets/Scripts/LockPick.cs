@@ -7,16 +7,17 @@ public class LockPick : MonoBehaviour
     public Camera cam;
     public Transform innerLock;
     public Transform pickPosition;
-    public GameManager gameManager;
+    //public GameManager gameManager;
 
     public float maxAngle = 90;
     public float lockSpeed = 10;
 
+    //Time can choice
     [Range(1, 25)]
     public float choice = 5;
 
-    //[Min(1)]
-    [Range(1, 50)]
+    //the range of the lock
+    [Range(1, 25)]
     public float lockRange = 10;
 
     private float eulerAngle;
@@ -30,7 +31,7 @@ public class LockPick : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        newLock();
     }
 
     // Update is called once per frame
@@ -67,7 +68,7 @@ public class LockPick : MonoBehaviour
            keyPressTime = 0;
        }
 
-        keyPressTime = Mathf.Clamp(keyPressTime, 0, 1);
+        //keyPressTime = Mathf.Clamp(keyPressTime, 0, 1);
 
         float percentage = Mathf.Round(100 - Mathf.Abs((eulerAngle - unlockAngle) / 100) * 100);
         float lockRotation = ((percentage / 100) * maxAngle) * keyPressTime;
@@ -78,13 +79,13 @@ public class LockPick : MonoBehaviour
 
         if (lockLerp >= maxRotation - 1)
         {
+            Debug.Log(unlockRange);
+            Debug.Log(eulerAngle);
             if (eulerAngle < unlockRange.y && eulerAngle > unlockRange.x)
             {
                 Debug.Log("Unlocked!");
 
                 //gameManager.CloseLock();
-
-                newLock();
 
                 movePick = true;
                 keyPressTime = 0;
