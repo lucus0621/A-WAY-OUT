@@ -49,7 +49,7 @@ public class TableMove : MonoBehaviour
                 if (IsMoving == false)
                 {
                     Moving.Play();
-                    targetAngels01 = Quaternion.Euler(-60, -15, -90);
+                    targetAngels01 = Quaternion.Euler(0, 100, 0);
                     //transform.position = Vector3.MoveTowards(transform.position, targetPosition, maxDistanceDelta);
                     IsMoving = true;
                 }
