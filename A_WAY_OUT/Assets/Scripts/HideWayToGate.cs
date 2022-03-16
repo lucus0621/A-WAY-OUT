@@ -9,14 +9,15 @@ public class HideWayToGate : MonoBehaviour
     public Transform MarkPos;
     private GameObject gameObjectsl;
 
-    private void Start()
+    void Start()
     {
         key1 = false;
+        GetComponent<TwoKeyDoor>();
     }
 
     void OnTriggerEnter(Collider collider)
     {
-        if (key1)
+        if (TwoKeyDoor.key1 == true)
         {
             HideWayBroken.Play();
             Debug.Log("HideWay");
@@ -30,7 +31,7 @@ public class HideWayToGate : MonoBehaviour
 
     void ShowObj()
     {
-        CancelInvoke();
-        gameObjectsl.SetActive(true);
+       CancelInvoke();
+       gameObjectsl.SetActive(true);
     }
 }
