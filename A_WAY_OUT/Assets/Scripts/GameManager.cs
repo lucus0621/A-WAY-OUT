@@ -6,7 +6,11 @@ public class GameManager : MonoBehaviour
 {
     //public GameObject LockPick;
     //public GameObject Lock;
-    public GameObject LockPanel;
+    //public GameObject LockPanel;
+    public GameObject key;
+    public GameObject locks;
+    public Camera mainCamera;
+    public Camera keyCamera;
 
 
     // Start is called before the first frame update
@@ -24,11 +28,19 @@ public class GameManager : MonoBehaviour
 
    public void ShowLock()
    {
-        LockPanel.SetActive(true);     
+        //LockPanel.SetActive(true);
+        mainCamera.enabled = false;
+        keyCamera.enabled = true;
+        key.SetActive(true);
+        locks.SetActive(true);
    }
    
    public void CloseLock()
    {
-        LockPanel.SetActive(false);
+        //LockPanel.SetActive(false);
+        mainCamera.enabled = true;
+        keyCamera.enabled = false;
+        key.SetActive(false);
+        locks.SetActive(false);
     }
 }
