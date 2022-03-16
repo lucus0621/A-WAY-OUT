@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    //public GameObject key;
-    //public GameObject locks;
-    //public Camera mainCamera;
-    //public Camera keyCamera;
+    public bool isKey = false;
 
 
     // Start is called before the first frame update
@@ -22,22 +19,8 @@ public class GameManager : MonoBehaviour
         
     }
 
-
-   //public void ShowLock()
-   //{
-   //     //LockPanel.SetActive(true);
-   //     mainCamera.enabled = false;
-   //     keyCamera.enabled = true;
-   //     key.SetActive(true);
-   //     locks.SetActive(true);
-   //}
-   //
-   //public void CloseLock()
-   //{
-   //     //LockPanel.SetActive(false);
-   //     mainCamera.enabled = true;
-   //     keyCamera.enabled = false;
-   //     key.SetActive(false);
-   //     locks.SetActive(false);
-   // }
+    public void GetKey()
+    {
+        isKey = true;
+    }
 }

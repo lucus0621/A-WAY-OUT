@@ -21,8 +21,11 @@ public class PlayerMovement : MonoBehaviour
     bool isGrounded;
     public Slider powerSlider;
 
+    public GameManager gameManager;
+
     private Pack pack;
     private Transform tr;
+
 
     private AudioSource audioSource;
 
@@ -104,12 +107,14 @@ public class PlayerMovement : MonoBehaviour
                 {
                     if (obj.name == "Key1")
                     {
+                        Debug.Log("Get Key1");
+                        gameManager.GetKey();
                         TwoKeyDoor.key1 = true;
                     }
                     else if (obj.name == "Key2")
                     {
+                        Debug.Log("Get Key2");
                         TwoKeyDoor.key2 = true;
-
                     }
                     obj = pack.getItem(obj);
                     if (obj.count == 0)
