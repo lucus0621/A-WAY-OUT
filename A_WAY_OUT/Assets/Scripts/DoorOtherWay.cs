@@ -50,7 +50,7 @@ public class DoorOtherWay : MonoBehaviour
             {
                 if (haveLock)
                 {
-                    gameManager.ShowLock();
+                    //gameManager.ShowLock();
                 }
 
                 DoorOpen.Play();

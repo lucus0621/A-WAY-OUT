@@ -82,7 +82,7 @@ public class LockPick : MonoBehaviour
             {
                 Debug.Log("Unlocked!");
 
-                gameManager.CloseLock();
+                //gameManager.CloseLock();
 
                 newLock();
 
