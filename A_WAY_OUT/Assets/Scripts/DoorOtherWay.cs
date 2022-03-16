@@ -7,12 +7,15 @@ public class DoorOtherWay : MonoBehaviour
     private bool enterCollide = false;
 
     public GameObject Door;
+    public GameManager gameManager;
     //public GameManager gameManager;
     public bool Door_false = false;
     Quaternion targetAngels01;
 
     public AudioSource DoorOpen;
     public bool IsOpenClose = false;
+
+    public bool haveLock = true;
 
     void OnTriggerEnter(Collider collider)
     {
@@ -45,10 +48,13 @@ public class DoorOtherWay : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
-                DoorOpen.Play();
-                Door_false = true;
+                if (haveLock)
+                {
+                    gameManager.ShowLock();
+                }
 
-                //gameManager.ShowLock();
+                DoorOpen.Play();
+                Door_false = true;                
 
                 if (IsOpenClose == false)
                 {
