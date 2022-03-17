@@ -7,7 +7,7 @@ public class LockPick : MonoBehaviour
     public Camera cam;
     public Transform innerLock;
     public Transform pickPosition;
-    //public GameManager gameManager;
+    public GameManager gameManager;
 
     public float maxAngle = 90;
     public float lockSpeed = 10;
@@ -85,7 +85,7 @@ public class LockPick : MonoBehaviour
             {
                 Debug.Log("Unlocked!");
 
-                //gameManager.CloseLock();
+                gameManager.CallMainScene();
 
                 movePick = true;
                 keyPressTime = 0;
@@ -95,6 +95,11 @@ public class LockPick : MonoBehaviour
                 float randomRotation = Random.insideUnitCircle.x;
                 transform.eulerAngles += new Vector3(0, 0, Random.Range(-randomRotation, randomRotation));
             }
+        }
+        else if (Input.GetKeyUp(KeyCode.P))
+        {
+            Debug.Log("Cheat");
+            gameManager.CallMainScene();
         }
     }
 
