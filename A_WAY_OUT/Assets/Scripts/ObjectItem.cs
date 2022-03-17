@@ -14,6 +14,7 @@ public class ObjectItem : MonoBehaviour
     public int maxAdd;
 
     public bool isChecked;
+    public UIManager ui_Manager;
 
     // Use this for initialization
     void Start()
@@ -27,10 +28,12 @@ public class ObjectItem : MonoBehaviour
         if (isChecked)
         {
             GetComponent<MeshRenderer>().material.color = Color.red;
+            ui_Manager.showInteractablePickup(true);
         }
         else
         {
             GetComponent<MeshRenderer>().material.color = Color.white;
+            ui_Manager.showInteractablePickup(false);
         }
         isChecked = false;
     }
