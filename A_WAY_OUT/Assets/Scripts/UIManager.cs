@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
 	public GameObject g_InitialTex;
 	public GameObject g_InitialTexInstructions;
 	public GameObject g_interactiveObjectText;
+	public GameObject g_MoveToRoom2;
 
 	public GameObject g_YouWon;
 
