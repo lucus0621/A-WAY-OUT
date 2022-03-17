@@ -15,6 +15,10 @@ public class AIMove : MonoBehaviour
     public AIState aiState;
     public GameObject player;
 
+    //Chase Range
+    [Range(1, 25)]
+    public float chaseRange = 4;
+
     private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
@@ -48,7 +52,7 @@ public class AIMove : MonoBehaviour
             {
                 audioSource.Play();
             }
-            if (Vector3.Distance(transform.position, player.transform.position) > 5)
+            if (Vector3.Distance(transform.position, player.transform.position) > chaseRange)
             {
                 Debug.Log("Lose Player");
                 aiState = AIState.Patrol;
