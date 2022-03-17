@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
 
 	void Start ()
 	{
-		Time.timeScale = 1;
+	
 		p_health = GetComponent<HealthSystem>();
 		rgdbody = GetComponent<Rigidbody> ();
 		curCamera = tPCamera;
