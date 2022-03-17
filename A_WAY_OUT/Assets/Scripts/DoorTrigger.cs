@@ -51,7 +51,7 @@ public class DoorTrigger : MonoBehaviour
             {
                 if (HaveLock)
                 {
-                    gameManager.CallKeyScene();
+                    gameManager.SetCamera(GameManager.PViews.Lockpin);
                 }
 
                 DoorOpen.Play();
