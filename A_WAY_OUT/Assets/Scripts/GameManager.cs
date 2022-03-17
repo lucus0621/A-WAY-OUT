@@ -24,12 +24,12 @@ public class GameManager : MonoBehaviour
 
     public void CallKeyScene()
     {
-        SceneManager.LoadScene(SceneName1);
+        SceneManager.LoadScene(SceneName2);
     }
 
     public void CallMainScene()
     {
-        SceneManager.LoadScene(SceneName2);
+        SceneManager.LoadScene(SceneName1);
     }
 
     public void GetKey()

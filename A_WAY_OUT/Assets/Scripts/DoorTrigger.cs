@@ -16,6 +16,8 @@ public class DoorTrigger : MonoBehaviour
 
     public GameManager gameManager;
 
+    public bool HaveLock = false;
+
     void OnTriggerEnter(Collider collider)
     {
         Debug.Log("enter");
@@ -47,7 +49,10 @@ public class DoorTrigger : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
-                gameManager.CallKeyScene();
+                if (HaveLock)
+                {
+                    gameManager.CallKeyScene();
+                }
 
                 DoorOpen.Play();
                 Door_false = true;
