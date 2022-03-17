@@ -8,6 +8,7 @@ public class UIManagerTutorial : MonoBehaviour {
 	public GameObject g_InitialText;
 	public GameObject g_InitialRun;
 	public GameObject g_Initialinteract;
+	public GameObject g_InitialObjective;
 
 
 	[Header("SecondFloor")]
@@ -21,12 +22,16 @@ public class UIManagerTutorial : MonoBehaviour {
 	public GameObject g_YouWon;
 
 	internal GameObject currentText;
+	public GameManagerTutorial gmanger;
+	private PlayerController ply;
 	private float timer = 0;
 	// Use this for initialization
 	void Start() {
 		currentText = g_InitialText;
 		currentText.SetActive(true);
-		Time.timeScale = 0;
+
+		gmanger.player.GetComponent<PlayerController>().enabled = false;
+		
 		
 	}
 
@@ -45,8 +50,13 @@ public class UIManagerTutorial : MonoBehaviour {
 		}
 		if (Input.GetKey(KeyCode.C) && g_Initialinteract.active)
 		{
+			g_Initialinteract.SetActive(false);
+			g_InitialObjective.SetActive(true);
+		}
+		if (Input.GetKey(KeyCode.Space) && g_InitialObjective.active)
+		{
 			UI_panel.SetActive(false);
-			
+			gmanger.player.GetComponent<PlayerController>().enabled = true;
 		}
 	}
 	public void SetMouseActive (bool status){
