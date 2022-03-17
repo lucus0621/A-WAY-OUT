@@ -43,8 +43,11 @@ public class UIManager : MonoBehaviour
 			currentText = g_InitialTexInstructions;
 			currentText.SetActive(true);
 			endInstructions++;
+            if (endInstructions >1)
+            {
+				currentText.SetActive(false);
+            }
 		}
-
 		
 	}
 	public void SetMouseActive(bool status)
