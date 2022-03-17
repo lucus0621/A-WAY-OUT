@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public string SceneName1;
     public string SceneName2;
 
+    private bool isKeyScene = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,11 @@ public class GameManager : MonoBehaviour
 
     public void CallKeyScene()
     {
-        SceneManager.LoadScene(SceneName2);
+        isKeyScene = true;
+        if (isKeyScene)
+        {
+            SceneManager.LoadScene(SceneName2);
+        }
     }
 
     public void CallMainScene()

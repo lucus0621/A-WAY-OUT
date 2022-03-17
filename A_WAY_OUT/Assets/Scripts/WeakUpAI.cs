@@ -22,6 +22,7 @@ public class WeakUpAI : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            Debug.Log("Enemy Weakup");
             aimove.ChangeAiStatePatrol();
         }
     }

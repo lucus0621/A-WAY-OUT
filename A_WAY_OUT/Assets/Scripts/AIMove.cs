@@ -29,7 +29,6 @@ public class AIMove : MonoBehaviour
     {
         if (aiState == AIState.Patrol)
         {
-            //
             if (agent.remainingDistance <= 0.3f)
             {
                 currentWayPoint = (currentWayPoint + 1) % wayPoints.Length;
@@ -43,13 +42,15 @@ public class AIMove : MonoBehaviour
         }
         else if (aiState == AIState.Chase)
         {
+            Debug.Log("See Player");
             agent.SetDestination(player.transform.position);
             if (audioSource.isPlaying == false)
             {
                 audioSource.Play();
             }
-            if (Vector3.Distance(transform.position, player.transform.position) > 7)
+            if (Vector3.Distance(transform.position, player.transform.position) > 5)
             {
+                Debug.Log("Lose Player");
                 aiState = AIState.Patrol;
                 agent.SetDestination(wayPoints[currentWayPoint].position);
             }
@@ -61,7 +62,7 @@ public class AIMove : MonoBehaviour
         RaycastHit hit;
         if (Physics.Linecast(transform.position, player.transform.position, out hit))
         {
-            //Debug.Log(hit.transform.gameObject.name);
+            Debug.Log(hit.transform.gameObject.name);
             Debug.DrawLine(hit.point, transform.position, Color.blue, 3.5f);
             if (hit.transform.gameObject == player)
                 aiState = AIState.Chase;
