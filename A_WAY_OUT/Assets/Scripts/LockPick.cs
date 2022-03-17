@@ -37,7 +37,7 @@ public class LockPick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.localPosition = pickPosition.position;
+        transform.position = pickPosition.position;
 
         if (movePick)
         {
@@ -85,7 +85,7 @@ public class LockPick : MonoBehaviour
             {
                 Debug.Log("Unlocked!");
 
-                gameManager.CallMainScene();
+                gameManager.SetCamera(GameManager.PViews.NormalGame);
 
                 movePick = true;
                 keyPressTime = 0;
@@ -99,7 +99,7 @@ public class LockPick : MonoBehaviour
         else if (Input.GetKeyUp(KeyCode.P))
         {
             Debug.Log("Cheat");
-            gameManager.CallMainScene();
+            gameManager.SetCamera(GameManager.PViews.NormalGame);
         }
     }
 
