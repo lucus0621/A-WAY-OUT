@@ -115,6 +115,12 @@ public class PlayerMovement : MonoBehaviour
                         Debug.Log("Get Key2");
                         TwoKeyDoor.key2 = true;
                     }
+                    if (obj.name == "FlashLight")
+                    {
+                        Debug.Log("Get FlashLight");
+                        PickupFlashLight.flashLight = true;
+                    }
+
                     obj = pack.getItem(obj);
                     if (obj.count == 0)
                     {
