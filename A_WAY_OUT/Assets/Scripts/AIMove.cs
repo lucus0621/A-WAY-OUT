@@ -59,6 +59,7 @@ public class AIMove : MonoBehaviour
                 agent.SetDestination(wayPoints[currentWayPoint].position);
             }
         }
+        
     }
 
     public void CheckVisibleHostile(GameObject player)
@@ -93,3 +94,4 @@ public enum AIState
     Chase,
     Sleep
 }
+
