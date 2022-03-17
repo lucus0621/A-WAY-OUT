@@ -69,7 +69,11 @@ public class UIManager : MonoBehaviour
 	}
 	public void showInteractablePickup(bool show)
     {
-		g_interactiveObjectText.SetActive(show);
+		if(g_interactiveObjectText!= null)
+        {
+			g_interactiveObjectText.SetActive(show);
+		}
+		
 
 	}
 }

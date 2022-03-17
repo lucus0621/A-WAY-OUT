@@ -16,7 +16,7 @@ public class HideWayToGate : MonoBehaviour
         GetComponent<TwoKeyDoor>();
     }
 
-    void OnTriggerEnter(Collider collider)
+    void OnTriggerStay(Collider collider)
     {
         if (TwoKeyDoor.key1 == true)
         {
@@ -29,6 +29,7 @@ public class HideWayToGate : MonoBehaviour
                 collider.gameObject.SetActive(false);
                 collider.transform.position = MarkPos.position;
                 Invoke("ShowObj", 0.5f);
+                ui_Manager.g_MoveToRoom2.SetActive(false);
             }
            
         }

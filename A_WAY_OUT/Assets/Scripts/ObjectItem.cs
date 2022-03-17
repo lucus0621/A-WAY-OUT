@@ -14,6 +14,8 @@ public class ObjectItem : MonoBehaviour
     public int maxAdd;
 
     public bool isChecked;
+
+    bool inInventory = false;
     public UIManager ui_Manager;
 
     // Use this for initialization
@@ -28,13 +30,33 @@ public class ObjectItem : MonoBehaviour
         if (isChecked)
         {
             GetComponent<MeshRenderer>().material.color = Color.red;
-            ui_Manager.showInteractablePickup(true);
+            //
         }
         else
         {
             GetComponent<MeshRenderer>().material.color = Color.white;
-            ui_Manager.showInteractablePickup(false);
+            //
         }
         isChecked = false;
+
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!inInventory)
+        {
+            ui_Manager.showInteractablePickup(true);
+        }
+        
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (!inInventory)
+        {
+            ui_Manager.showInteractablePickup(false);
+        }
+    }
+    private void OnDestroy()
+    {
+        ui_Manager.showInteractablePickup(false);
     }
 }

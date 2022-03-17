@@ -101,6 +101,7 @@ public class PlayerMovement : MonoBehaviour
             if (obj != null)
             {
                 obj.isChecked = true;
+                
                 //Debug.Log(obj.objName);
                 if (Input.GetKeyDown(KeyCode.R))
                 {
@@ -127,6 +128,10 @@ public class PlayerMovement : MonoBehaviour
                         //gameObj.SetActive(false);
                         Destroy(gameObj);
                     }
+                }
+                else
+                {
+                    
                 }
             }
         }
