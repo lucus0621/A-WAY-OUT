@@ -21,6 +21,7 @@ public class UIManager : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
+		Time.timeScale = 0;
 		if(isTutorial)
         {
 			currentText = g_InitialTexttutorial;
@@ -42,13 +43,15 @@ public class UIManager : MonoBehaviour
 			currentText.SetActive(false);
 			currentText = g_InitialTexInstructions;
 			currentText.SetActive(true);
-			endInstructions++;
-            if (endInstructions >1)
-            {
-				currentText.SetActive(false);
-            }
+	
 		}
-		
+		if (Input.GetKey(KeyCode.S))
+		{
+			g_Nomr.SetActive(false);
+			Time.timeScale = 1;
+		}
+
+
 	}
 	public void SetMouseActive(bool status)
 	{
@@ -61,6 +64,11 @@ public class UIManager : MonoBehaviour
 		{
 			Cursor.lockState = CursorLockMode.Locked;
 		}
+
+	}
+	public void showInteractablePickup(bool show)
+    {
+		g_interactiveObjectText.SetActive(show);
 
 	}
 }
