@@ -22,7 +22,6 @@ public class PlayerMovement : MonoBehaviour
     public Slider powerSlider;
 
     public GameManager gameManager;
-
     private Pack pack;
     private Transform tr;
 
