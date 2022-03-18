@@ -21,17 +21,13 @@ public class HideWayToGate : MonoBehaviour
         if (TwoKeyDoor.key1 == true)
         {
             ui_Manager.g_MoveToRoom2.SetActive(true);
-            if (Input.GetKey(KeyCode.F))
-            {
-                HideWayBroken.Play();
-                Debug.Log("HideWay");
-                gameObjectsl = collider.gameObject;
-                collider.gameObject.SetActive(false);
-                collider.transform.position = MarkPos.position;
-                Invoke("ShowObj", 0.5f);
-                ui_Manager.g_MoveToRoom2.SetActive(false);
-            }
-           
+            HideWayBroken.Play();
+            Debug.Log("HideWay");
+            gameObjectsl = collider.gameObject;
+            collider.gameObject.SetActive(false);
+            collider.transform.position = MarkPos.position;
+            Invoke("ShowObj", 0.5f);
+
         }
     }
 

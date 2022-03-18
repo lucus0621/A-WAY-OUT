@@ -40,6 +40,7 @@ public class ObjectItem : MonoBehaviour
         isChecked = false;
 
     }
+    
     private void OnTriggerEnter(Collider other)
     {
         if (!inInventory)
@@ -59,4 +60,5 @@ public class ObjectItem : MonoBehaviour
     {
         ui_Manager.showInteractablePickup(false);
     }
+    
 }

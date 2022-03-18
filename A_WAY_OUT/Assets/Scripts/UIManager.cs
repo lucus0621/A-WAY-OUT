@@ -67,6 +67,7 @@ public class UIManager : MonoBehaviour
 		}
 
 	}
+	
 	public void showInteractablePickup(bool show)
     {
 		if(g_interactiveObjectText!= null)
@@ -76,5 +77,6 @@ public class UIManager : MonoBehaviour
 		
 
 	}
+	
 }
 
